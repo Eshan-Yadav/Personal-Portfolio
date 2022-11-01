@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <style src="./app.js"></style>
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+    <div class="left-navbar">
+        <div class="left-navbar__menu">
+            <div class="logo">
+                <span id="logo-span">&nbsp🐊</span>
+                <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fad"
+                data-icon="angle-double-right"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                    class="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                    class="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+
+            </div>
+            
+            <ul>
+                <li>
+                    <a href="#">
+                       <span>Home</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                    </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                       <span>Skills</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+                            <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
+                          </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                       <span>Projects</span>
+                        <svg class="proj" xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                            <path class="proj" d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                            <path class="proj" d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                          </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                       <span>Contact</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div id="test" class="background">
+
+          <div class="text">
+            <p style="z-index: 20;"  class="type" >Hi, My Name Is Eshan,</p> 
+          
+            <p>
+              <a href="" class="typewrite" data-period="2000" data-type='[ "I am a College Student :)", "I Love Bioinformatics.", "And I Love to Develop!" ]'>
+                <span class="wrap"></span>
+              </a>
+            </p>
+          </div>
+          
+        </div>
+    </main>
+
+    <div class="picture">
+      <img src="./image/self5.jpg" alt="">
+    </div>
+
+    <div class="proj-back">
+    <div class="content">
+      <section >
+        <!-- <h1 class=".heading">My Portfolio</h1> -->
+
+        <div id="wig"class="wiggle">
+            <h1><div class="a" >M</div>
+            <h1><div class="a" > </div>
+              <h1><div class="a" >y</div>
+              <h1><div class="a" > </div>
+              <h1><div class="a" >P</div>
+              <h1><div class="a" >r</div>
+              <h1><div class="a" >o</div>
+              <h1><div class="a" >j</div>
+              <h1><div class="a" >e</div>
+              <h1><div class="a" >c</div>
+              <h1><div class="a" >t</div>
+              <h1><div class="a" >s</div>
+              <!-- <h1><div class="a" >o</div> -->
+        </div>
+        <p>
+          A small gallery of recent projects chosen by me. I've done them all together with some amazing people. It's only a drop in the ocean compared to the entire list.
+        </p>
+      </section>
+
+    
+
+ 
+      <div class="projects">
+        <div class="wrapper">
+          <div class="container">
+            <div class="child bg-one">
+              <span>Antigen DB</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="child bg-two">
+              <span>Flutter UI Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="projects">
+        <div class="wrapper">
+          <div class="container">
+            <div class="child bg-three">
+              <span>Web Scraping</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="child bg-four">
+              <span>Unity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="projects">
+        <div class="wrapper">
+          <div class="container">
+            <div class="child bg-five">
+              <span>OCR</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="child bg-six">
+              <span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <div class="wrapper">
+          <div class="container">
+            <div class="child bg-seven">
+              <span>PhyloTree</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="child bg-eight">
+              <span>OpenCV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <div class="wrapper">
+          <div class="container">
+            <div class="child bg-nine">
+              <span>Ettercap</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="child bg-ten">
+              <span>Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        
+        <h4 class="card-subtitle"></h4>
+      </div>
+      <i class="fa-solid fa-hat-witch card-icon"></i>
+    </div>
+    
+
+
+
+    <h1 class="skill">Skills</h1>
+    <div class="resume">
+      
+      <div class="base">
+        <div class="profile">
+         
+        
+        </div>
+        
+      
+      </div>
+      <div class="func">
+        <div class="work">
+          <h3><i class="fa fa-briefcase"></i>Experience</h3>
+          <ul>
+            <li><span>Intern molecular dynamic simulation<br>Sequencing</span><small>Sun Pharma</small><small>Apr 2022 - Jun 2022</small></li>
+            <li><span>Inter Structure modelling</span><small>Aggape</small><small>Jan 2020 - Apr 2021</small></li>
+            <li><span>Intern - Web Design</span><small>Sakhya</small><small>Aug 2019 - Dec 2020</small></li>
+          </ul>
+        </div>
+        <div class="edu">
+          <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+          <ul>
+            <!-- <li><span>Bachelor of Science<br>Web Design and Development</span><small>BYU-Idaho</small><small>Jan. 2016 - Apr. 2018</small></li> -->
+            <li><span>Computer Science</span><small>Edmonds Community College</small><small>Sept. 2020 - now</small></li>
+            <li><span>Senior High School</span><small>Army Public School,Lucknow</small><small>Jun. 2019 - Jun. 2020</small></li>
+          </ul>
+        </div>
+        <div class="skills-prog">
+          <h3><i class="fas fa-code"></i>Programming Skills</h3>
+          <ul>
+            <li data-percent="95"><span>HTML5</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="90"><span>CSS3 & SCSS</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="60"><span>JavaScript</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="50"><span>jQuery</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="40"><span>JSON</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="55"><span>PHP</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+            <li data-percent="40"><span>MySQL</span>
+              <div class="skills-bar">
+                <div class="bar"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="skills-soft">
+          <h3><i class="fas fa-bezier-curve"></i>Software Skills</h3>
+          <ul>
+            <li data-percent="90">
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45"></circle>
+              </svg><span>Unity</span><small></small>
+            </li>
+            <li data-percent="75">
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45"></circle>
+              </svg><span>Photoshop</span><small></small>
+            </li>
+            <li data-percent="85">
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45"></circle>
+              </svg><span>Ettercap</span><small></small>
+            </li>
+            <li data-percent="65">
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45"></circle>
+              </svg><span>Figma</span><small></small>
+            </li>
+          </ul>
+        </div>
+        <div class="interests">
+          <h3><i class="fas fa-star"></i>Interests</h3>
+          <div class="interests-items">
+            <div class="art"><i class="fas fa-palette"></i><span>Art</span></div>
+            <div class="art"><i class="fas fa-book"></i><span>Books</span></div>
+            <div class="movies"><i class="fas fa-film"></i><span>Movies</span></div>
+            <div class="music"><i class="fas fa-headphones"></i><span>Music</span></div>
+            <div class="games"><i class="fas fa-gamepad"></i><span>Games</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  <div id="bottom">
+    <div id="bubble-wrapper">
+  
+    </div>
+  
+    <footer id="footer">
+      <div id="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-section-title">General</h3>
+          <div class="footer-section-links">
+            <a target="_blank">Directory</a>
+            <a  target="_blank">About Me</a>
+            <a  target="_blank">Contact</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-title">Social</h3>
+          <div class="footer-section-links">
+            <a  target="_blank">Twitter</a>
+            <a  target="_blank">CodePen</a>
+            <a  target="_blank">Linkden</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-title">Legal</h3>
+          <div class="footer-section-links">
+            <a  target="_blank">Privacy</a>
+            <a target="_blank">Terms</a>
+            <a  target="_blank">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+    <script src="./app.js"></script>
+
+  <script>
+    (function() {
+  $(".skills-prog li")
+    .find(".skills-bar")
+    .each(function(i) {
+      $(this)
+        .find(".bar")
+        .delay(i * 150)
+        .animate(
+          {
+            width:
+              $(this)
+                .parents()
+                .attr("data-percent") + "%"
+          },
+          1000,
+          "linear",
+          function() {
+            return $(this).css({
+              "transition-duration": ".5s"
+            });
+          }
+        );
+    });
+
+  $(".skills-soft li")
+    .find("svg")
+    .each(function(i) {
+      var c, cbar, circle, percent, r;
+      circle = $(this).children(".cbar");
+      r = circle.attr("r");
+      c = Math.PI * (r * 2);
+      percent = $(this)
+        .parent()
+        .data("percent");
+      cbar = (100 - percent) / 100 * c;
+      circle.css({
+        "stroke-dashoffset": c,
+        "stroke-dasharray": c
+      });
+      circle.delay(i * 150).animate(
+        {
+          strokeDashoffset: cbar
+        },
+        1000,
+        "linear",
+        function() {
+          return circle.css({
+            "transition-duration": ".3s"
+          });
+        }
+      );
+      $(this)
+        .siblings("small")
+        .prop("Counter", 0)
+        .delay(i * 150)
+        .animate(
+          {
+            Counter: percent
+          },
+          {
+            duration: 1000,
+            step: function(now) {
+              return $(this).text(Math.ceil(now) + "%");
+            }
+          }
+        );
+    });
+}.call(this));
+
+
+
+  </script>
+
+  <script>
+    const wrapper = document.getElementById("bubble-wrapper");
+
+const animateBubble = x => {  
+  const bubble = document.createElement("div");
+  
+  bubble.className = "bubble";
+  bubble.style.left = `${x}px`;
+  
+  wrapper.appendChild(bubble);
+  
+  setTimeout(() => wrapper.removeChild(bubble), 2000);
+}
+
+window.onmousemove = e => animateBubble(e.clientX);
+
+
+  </script>
+<script>
+  const subtitle = document.getElementsByClassName("card-subtitle")[0];
+
+const createWord = (text, index) => {
+  const word = document.createElement("span");
+  
+  word.innerHTML = `${text} `;
+  
+  word.classList.add("card-subtitle-word");
+  
+  word.style.transitionDelay = `${index * 40}ms`;
+  
+  return word;
+}
+
+const addWord = (text, index) => subtitle.appendChild(createWord(text, index));
+
+const createSubtitle = text => text.split(" ").map(addWord);
+
+createSubtitle("Hi there, welcome to my portfolio! I'am a computer science");
+createSubtitle("student at the Vellore Institure of Technology. I love to code");
+createSubtitle("and I'm always looking for new opportunities to learn and grow.");
+createSubtitle("And have a look around there might be some secret stuff hidden ;)");
+
+VANTA.CELLS({
+  el: "#teste",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: true,
+  minHeight: 250.00,
+  minWidth: 100.00,
+  scale: 2.0,
+  scaleMobile: 1.00,
+  speed:1.5,
+  color1: 0xee340,
+  color2: 0x526b36
+})
+    </script>
+    </main>
+
+
+</body>
+</html>
